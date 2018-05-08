@@ -15,7 +15,6 @@
 
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
-        = link_to t('.logout'),
+        = link_to current_user.decorate.full_name_with_logout,
         destroy_user_session_path,
-        method: :delete, class: 'dropdown-item',
-        class: 'nav-link'
+        method: :delete, class: 'nav-link'
