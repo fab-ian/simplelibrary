@@ -10,6 +10,7 @@ gem 'rails', '~> 5.2.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1.1'
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
 gem 'haml-rails', '~> 1.0'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
@@ -21,6 +22,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.7'
 end
