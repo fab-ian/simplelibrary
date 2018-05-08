@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - db/**
+    - db/migrate/**
+    - bin/**
+    - config/**/*
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - config/**/*
+    - spec/**/*
+
+Documentation:
+  Enabled: false
