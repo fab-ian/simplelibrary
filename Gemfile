@@ -11,9 +11,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1.1'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'draper'
 gem 'haml-rails', '~> 1.0'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'omniauth-google-oauth2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rubocop'
@@ -23,6 +25,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'faker'
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.7'
 end
