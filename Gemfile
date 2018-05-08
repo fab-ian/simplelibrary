@@ -19,6 +19,13 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.7'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_bot_rails', '~> 4.0'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
