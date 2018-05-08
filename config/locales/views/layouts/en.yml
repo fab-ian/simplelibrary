@@ -1,0 +1,11 @@
+en:
+  layouts:
+    application:
+      title: 'Simple Library'
+
+    header:
+      title: 'SIMPLE LIBRARY'
+      logout: 'Log out'
+
+    footer:
+      copyright: '© naibaf 2018'
