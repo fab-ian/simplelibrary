@@ -1,0 +1,12 @@
+%h1 #{Book.model_name.plural.humanize} #{link_to t('add'), new_book_path, class: 'btn btn-sm btn-success'}
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: 'col'}= Book.human_attribute_name(:title)
+      %th{scope: 'col'}= Book.human_attribute_name(:description)
+      %th{scope: 'col'}= Book.human_attribute_name(:status)
+      %th{scope: 'col'}
+      %th{scope: 'col'}
+  #tbody
+  = render @books
