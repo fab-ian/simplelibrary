@@ -1,0 +1,5 @@
+%tr
+  %td= rental.book.title
+  %td= rental.user.decorate.full_name
+  %td= rental.status
+  %td= rental.created_at.to_s(:short)

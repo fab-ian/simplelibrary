@@ -11,7 +11,7 @@
   .collapse.navbar-collapse#navbar-supported-content
     %ul.navbar-nav.mr-auto
       %li.nav-item
-        = link_to 'menu1', '', class: 'nav-link'
+        = link_to t('.rentals'), rentals_path, class: 'nav-link'
 
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
