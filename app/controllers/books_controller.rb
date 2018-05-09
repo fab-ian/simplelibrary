@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BooksController < ApplicationController
-  before_action :find_book, only: %i[edit show update destroy]
+  before_action :find_book, only: %i[edit show update destroy loan return]
 
   def index
     @books = Book.order(title: :asc).decorate
@@ -34,6 +34,14 @@ class BooksController < ApplicationController
     redirect_to books_path, notice: I18n.t(message)
   end
 
+  def loan
+    change_status(:loan, I18n.t('message_of_loaning'))
+  end
+
+  def return
+    change_status(:return, I18n.t('message_of_returning'))
+  end
+
   private
 
   def params_book
@@ -42,5 +50,15 @@ class BooksController < ApplicationController
 
   def find_book
     @book = Book.find(params[:id]).decorate
+  end
+
+  def change_status(current_status, notice)
+    message = BookService.call(current_status, @book, current_user)
+
+    if message.nil?
+      redirect_to books_path, notice: notice
+    else
+      redirect_to books_path, error: message
+    end
   end
 end

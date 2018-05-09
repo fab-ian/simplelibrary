@@ -1,3 +1,5 @@
 %h1= @book.title
 %p= @book.description
-%p= @book.status
+%p
+  = @book.status
+  = @book.loan_return_url(current_user)

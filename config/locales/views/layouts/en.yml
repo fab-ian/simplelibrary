@@ -6,6 +6,7 @@ en:
     header:
       title: 'SIMPLE LIBRARY'
       logout: 'Log out'
+      rentals: 'Rentals'
 
     footer:
       copyright: '© naibaf 2018'

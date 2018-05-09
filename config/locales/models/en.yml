@@ -4,9 +4,14 @@ en:
       book:
         one: 'Book'
         other: 'Books'
+      rental:
+        one: 'Rental'
+        other: 'Rentals'
 
     attributes:
       book:
         title: 'Title'
         description: 'Description'
+        status: 'Status'
+      rental:
         status: 'Status'
