@@ -20,7 +20,7 @@ class BookDecorator < Draper::Decorator
   end
 
   def loaned?(user)
-    Rental.exists?(book: object, user: user, status: :loaned)
+    Rental.where(book: object, status: :loaned).last.user == user
   end
 
   def loan_url
